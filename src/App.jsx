@@ -76,12 +76,14 @@ function App() {
 
       <div className="bars-container">
         <div className="bar-container">
+            <h2>Storage Strength</h2>
             <div
             className="bar-fill"
             style={{ width: `${storageLevel}%` }} // Dynamically set width based on state
           ></div>
         </div>
         <div className="bar-container">
+            <h2>Retrieval Strength</h2>
             <div
             className="bar-fill"
             style={{ width: `${retrievalLevel}%` }} // Dynamically set width based on state
@@ -90,11 +92,11 @@ function App() {
       </div>
       <div className="buttons-container">
         <div className="button-container">
-          <button onClick={handleReminderClick}>Push Me!</button>
+          <button onClick={handleReminderClick}>Reminder</button>
           <p>Current Bar Level: {Math.round(storageLevel)}%</p>
         </div>
         <div className="button-container">
-          <button onClick={handleRetrievalClick}>Push Me!</button>
+          <button onClick={handleRetrievalClick}>Retrieval</button>
           <p>Current Bar Level: {Math.round(retrievalLevel)}%</p>
         </div>
       </div>
