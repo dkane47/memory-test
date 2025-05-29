@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css'; 
+import MessageDisplay from './MessageDisplay'; // Import the new component
 
 function App() {
   // State to control the bar's current level (0-100)
@@ -92,7 +93,7 @@ function App() {
       </div>
       <div className="buttons-container">
         <div className="button-container">
-          <button onClick={handleReminderClick}>Reminder</button>
+          <button onClick={handleReminderClick}>Exposure</button>
           <p>Current Bar Level: {Math.round(storageLevel)}%</p>
         </div>
         <div className="button-container">
@@ -104,7 +105,7 @@ function App() {
         <button onClick={handleResetClick}>Reset</button>
       </div>
 
-      
+      <MessageDisplay />
     </div>
   );
 }

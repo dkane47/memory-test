@@ -77,3 +77,7 @@ p {
   font-size: 1.1em;
   color: #555;
 }
+
+.message-display-container {
+  width: 600px;
+}
