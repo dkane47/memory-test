@@ -24,7 +24,7 @@ function App() {
     decayIntervalId.current = setInterval(() => {
       setRetrievalLevel((prevLevel) => {
         // Decrease by a small amount (e.g., 1% per interval)
-        const newLevel = prevLevel - (150 - storageLevel)/150;
+        const newLevel = prevLevel - (125 - storageLevel)/125;
 
         // If the bar level drops to 0 or below, clear the interval
         if (newLevel <= 0) {
@@ -40,7 +40,7 @@ function App() {
   // Event handler for the button click
   const handleReminderClick = () => {
     // Increase bar level by 20%, capping at 100%
-    setRetrievalLevel((prevLevel) => Math.min(prevLevel + 10, 100));
+    setRetrievalLevel((prevLevel) => Math.min(prevLevel + 10 + storageLevel / 10, 100));
     setStorageLevel((prevLevel) => Math.min(100,prevLevel + 0.1));
 
     // Immediately start (or restart) the decay process after adding to the bar
@@ -52,7 +52,7 @@ function App() {
       return;
     }
     
-    setRetrievalLevel((prevLevel) => Math.min(prevLevel + 30, 100));
+    setRetrievalLevel((prevLevel) => Math.min(prevLevel + 20 + 2 * storageLevel / 10, 100));
     setStorageLevel((prevLevel) => Math.min(100,prevLevel + (100 - retrievalLevel) / 80 * 10));
   };
 
