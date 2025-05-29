@@ -53,7 +53,7 @@ function App() {
     }
     
     setRetrievalLevel((prevLevel) => Math.min(prevLevel + 30, 100));
-    setStorageLevel((prevLevel) => Math.min(100,prevLevel + (100 - retrievalLevel) / 80 * 6));
+    setStorageLevel((prevLevel) => Math.min(100,prevLevel + (100 - retrievalLevel) / 80 * 10));
   };
 
   const handleResetClick = () => {
@@ -73,8 +73,6 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Memory</h1>
-
       <div className="bars-container">
         <div className="bar-container">
             <h2>Storage Strength</h2>
@@ -94,17 +92,14 @@ function App() {
       <div className="buttons-container">
         <div className="button-container">
           <button onClick={handleReminderClick}>Exposure</button>
-          <p>Current Bar Level: {Math.round(storageLevel)}%</p>
         </div>
         <div className="button-container">
           <button onClick={handleRetrievalClick}>Retrieval</button>
-          <p>Current Bar Level: {Math.round(retrievalLevel)}%</p>
         </div>
       </div>
       <div className="reset-container">
         <button onClick={handleResetClick}>Reset</button>
       </div>
-
       <MessageDisplay />
     </div>
   );

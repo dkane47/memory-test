@@ -40,7 +40,7 @@
 }
 
 .buttons-container {
-  height: 200px;
+  height: 100px;
   width: 400px;
   display: flex;
   flex-direction: row;
@@ -81,3 +81,18 @@ p {
 .message-display-container {
   width: 600px;
 }
+
+h1, h2 {
+  color: black;
+}
+
+.message-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.message-content {
+  height: 100px;
+}
+
