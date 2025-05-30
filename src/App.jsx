@@ -35,7 +35,7 @@ function App() {
         return newLevel;
       });
 
-      setStorageLevel((prevLevel) => {
+      /*setStorageLevel((prevLevel) => {
         // Decrease by a small amount (e.g., 1% per interval)
         const newLevel = prevLevel - ((110 - storageLevel)/110) / 15;
 
@@ -46,7 +46,7 @@ function App() {
           return 0; // Ensure it doesn't go negative
         }
         return newLevel;
-      });
+      });*/
     }, 100); // Adjust decay speed: e.g., 100ms for faster decay, 200ms for slower
   };
 
