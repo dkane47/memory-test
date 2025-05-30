@@ -34,6 +34,19 @@ function App() {
         }
         return newLevel;
       });
+
+      setStorageLevel((prevLevel) => {
+        // Decrease by a small amount (e.g., 1% per interval)
+        const newLevel = prevLevel - ((110 - storageLevel)/110) / 15;
+
+        // If the bar level drops to 0 or below, clear the interval
+        if (newLevel <= 0) {
+          clearInterval(decayIntervalId.current);
+          decayIntervalId.current = null; // Reset the ref
+          return 0; // Ensure it doesn't go negative
+        }
+        return newLevel;
+      });
     }, 100); // Adjust decay speed: e.g., 100ms for faster decay, 200ms for slower
   };
 
@@ -91,14 +104,14 @@ function App() {
       </div>
       <div className="buttons-container">
         <div className="button-container">
-          <button onClick={handleReminderClick}>Exposure</button>
+          <button className="control-button" onClick={handleReminderClick}>Exposure</button>
         </div>
         <div className="button-container">
-          <button onClick={handleRetrievalClick}>Retrieval</button>
+          <button className="control-button" onClick={handleRetrievalClick}>Retrieval</button>
         </div>
       </div>
       <div className="reset-container">
-        <button onClick={handleResetClick}>Reset</button>
+        <button className="reset-button" onClick={handleResetClick}>Reset</button>
       </div>
       <MessageDisplay />
     </div>
