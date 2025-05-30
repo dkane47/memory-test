@@ -36,15 +36,13 @@ function App() {
       });
 
       /*setStorageLevel((prevLevel) => {
+        if (storageLevel < 5) {
+          return;
+        }
+        
         // Decrease by a small amount (e.g., 1% per interval)
         const newLevel = prevLevel - ((110 - storageLevel)/110) / 15;
 
-        // If the bar level drops to 0 or below, clear the interval
-        if (newLevel <= 0) {
-          clearInterval(decayIntervalId.current);
-          decayIntervalId.current = null; // Reset the ref
-          return 0; // Ensure it doesn't go negative
-        }
         return newLevel;
       });*/
     }, 100); // Adjust decay speed: e.g., 100ms for faster decay, 200ms for slower
