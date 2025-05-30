@@ -127,3 +127,72 @@ h1, h2 {
   height: 100px;
 }
 
+
+
+@media (max-width: 600px) {
+  .app-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .bars-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .bar-container {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+
+  .bar-fill {
+    height: 30px;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .button-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .control-button, .reset-button, .message-button {
+    width: 90%;
+    font-size: 1em;
+    padding: 12px;
+  }
+
+  .reset-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .message-display-container {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .message-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .message-content {
+    height: auto;
+    min-height: 80px;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+}
