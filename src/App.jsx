@@ -89,17 +89,17 @@ function App() {
       <div className="bars-container">
         <div className="bar-container">
             <h2>Storage Strength</h2>
-            <div
+            <div className="bar-track"><div
             className="bar-fill"
             style={{ width: `${storageLevel}%` }} // Dynamically set width based on state
-          ></div>
+          ></div></div>
         </div>
         <div className="bar-container">
             <h2>Retrieval Strength</h2>
-            <div
+            <div className="bar-track"><div
             className="bar-fill"
             style={{ width: `${retrievalLevel}%` }} // Dynamically set width based on state
-          ></div>
+          ></div></div>
         </div>
       </div>
       <div className="buttons-container">

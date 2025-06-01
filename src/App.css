@@ -35,10 +35,18 @@
   width: 0%; /* Initial width */
   transition: width 0.2s ease-out; /* Smooth transition for width changes */
   border-radius: 3px; /* Slightly smaller border-radius than container */
-  border: 2px solid #333;
   margin-bottom: 20px;
   overflow: hidden; /* Ensure the fill stays within bounds */
-  background-color: #e0e0e0;
+  background-color: #909090;
+}
+
+.bar-track {
+  width: 100%; /* The track will take the full width of its parent (.bar-container) */
+  height: 35px; /* Define the height of the track */
+  border: 2px solid #ccc; /* Light grey border for the outline */
+  border-radius: 5px; /* Slightly rounded corners for the track */
+  background-color: #e0e0e0; /* A very light grey background for the empty part of the track */
+  overflow: hidden; /* Important to keep the fill inside the track's rounded corners */
 }
 
 .buttons-container {
