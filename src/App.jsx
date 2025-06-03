@@ -34,16 +34,6 @@ function App() {
         }
         return newLevel;
       });
-
-      setStorageLevel((prevLevel) => {
-        if (storageLevel < 5) {
-          return prevLevel;
-        }
-        
-        const newLevel = prevLevel - ((110 - storageLevel)/110) / 15;
-
-        return newLevel;
-      });
     }, 100); // Adjust decay speed: e.g., 100ms for faster decay, 200ms for slower
   };
 
